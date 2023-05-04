@@ -46,9 +46,7 @@ def hello_world():
   return render_template('home.html', job=jobs, company="Jatela")
 
 
-@app.route(
-  "api/jobs"
-)  # api is stand to use here as it represent this url will not retuen HTML website.
+@app.route("api/jobs")  # api is stand to use here as it represent this url will not retuen HTML website.
 def list_jobs():
   return jsonify(jobs)
 
