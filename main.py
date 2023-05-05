@@ -1,8 +1,6 @@
 from flask import Flask, render_template, jsonify  # from packeg flask, 'Flask' class is called. jsonify is use to convet data(jobs) into json object.
 
-app = Flask(
-  __name__
-)  # app is an oobject of class Flask now. in parenthisis we have to give a name
+app = Flask(__name__)  # app is an oobject of class Flask now. in parenthisis we have to give a name
 
 jobs = [{
   'id': 1,
@@ -46,10 +44,16 @@ def hello_world():
   return render_template('home.html', job=jobs, company="Jatela")
 
 
-@app.route("api/jobs")  # api is stand to use here as it represent this url will not retuen HTML website.
+@app.route("/api/jobs") # api is stand to use here as it represent this url will not returnHTML website."/" is important in starting.
 def list_jobs():
   return jsonify(jobs)
 
 
 if __name__ == '__main__':
   app.run(host='0.0.0.0', debug=True)
+
+
+
+# # this is a python standard that what framework we are using we have to provide them in this requirements.txt file.
+# flask
+# gunicorn : to put a flask application into production we have to use gunicorn.
