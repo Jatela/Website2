@@ -14,12 +14,21 @@
     </style>
   </head>
   <body>
+    {% include 'nav.html' %}
     <div class="container"> <!-- div:special tages from bootstrap to provide layout to content of webpage -->
-      <h1 class="text-center mt-2 mb-4">Food for all</h1> <!-- mt:margin top, mb:margin bottom,mt-2 is a class. .text-enter is a <class>          </class>-->
-      <img class="img-fluid" id="banner"src="https://job-project.dikshant-singh1.repl.co/static/Water.jpg" height="500">  <!-- id=banner assign to this image so that beautification can be done as shown above in head,  height="500" is also give in html language, when we move to css we dont need it.-->
+      <h1 class="text-center mt-2 mb-4">Pet of the year </h1> <!-- mt:margin top, mb:margin bottom,mt-2 is a class. .text-enter is a <class>          </class>-->
+      <img class="img-fluid" id="banner"src="https://job-project-1.dikshant-singh1.repl.co/static/hippo.jpg" height="500">  <!-- id=banner assign to this image so that beautification can be done as shown above in head,  height="500" is also give in html language, when we move to css we dont need it.-->
       <h2 class="text-center mt-2 mb-4">Careers with {{company}} </h2>
+      <div class="row" style="margin-bottom:16px">
+        <div class='col-md-6'> <!--md show pic only for medium device-->
       <p class="lead">  <!-- <p> this tage is for paragrape in html-->
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At consectetur lorem donec massa sapien faucibus. Convallis aenean et tortor at risus viverra adipiscing. Scelerisque fermentum dui faucibus in. Neque sodales ut etiam sit amet nisl. Lectus sit amet est placerat in egestas erat imperdiet sed. Massa sed elementum tempus egestas sed sed risus pretium. Vestibulum lectus mauris ultrices eros in. In iaculis nunc sed augue lacus. Eros in cursus turpis massa tincidunt dui. Pulvinar proin gravida hendrerit lectus.</p> 
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At consectetur lorem donec massa sapien faucibus. Convallis aenean et tortor at risus viverra adipiscing. Scelerisque fermentum dui faucibus in. Neque sodales ut etiam sit amet nisl. Lectus sit amet est placerat in egestas erat imperdiet sed. Massa sed elementum tempus egestas sed sed risus pretium. Vestibulum lectus mauris ultrices eros in. In iaculis nunc sed augue lacus. Eros in cursus turpis massa tincidunt dui. Pulvinar proin gravida hendrerit lectus.
+      </p>
+        </div>
+        <div class='d-none d-md-block col-md-6'>  <!--this line is blocking to show below image on mobile-->
+          <img src="static/chipmunk.jpg" style="height:420px;">
+        </div>
+      </div>
       <h2 class="text-center" style="margin-bottom:20px;">Open position</h2>
       <div>
         {%for each_job in job%}  <!--to run for loop-->
@@ -27,8 +36,9 @@
         {% endfor %}
       </div>
       <div style="text-align:center">  <!-- another way to apply styleing-->
-      <button class="btn btn-primary btn-lg btn btn-outline-success">Contact Us</button>
-        <p class="mt4">Copyright 2022,Jovin</p>  <!--to seperate this p from above p while styling we put class to a perticular paragraph-->
+      <a href="mailto:jateladikshant@gmail.com?subject=Feedback&body=Name%3A%0D%0APh%3A%0D%0AHow%20can%20we%20help%20you%3F" class="btn btn-primary btn-lg btn btn-outline-success">Contact Us</a>
+        <p class="mt4">Become animal with us</p>  <!--to seperate this p from above p while styling we put class to a perticular paragraph-->
+        {% include 'footer.html' %}
       </div>
     </div>
   </body>
