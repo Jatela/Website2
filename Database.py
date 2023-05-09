@@ -3,7 +3,7 @@ import os # os(operating system variable)
 
 db_connection_string = os.environ['db_connection_string']
 
-# #db_connection_string="mysql+pymysql://xcjk4oomf61nyf1gr8ot:pscale_pw_9RrGLyTigQazcLhxVmxBfre1GlFpvkb85hwAnax8JPY@aws.connect.psdb.cloud/dikshant?charset=utf8mb4"      (never put any passwords in github)
+# #db_connection_string="mysql+pymysql://3j4jc8ajwayabfzmurim:pscale_pw_5GD3rzCxxWdfbTL2G5PEY3pahUBm8plzgeqWzxfGPDG@aws.connect.psdb.cloud/dikshant?charset=utf8mb4"      (never put any passwords in github)
 
 engine = create_engine(
   db_connection_string,
