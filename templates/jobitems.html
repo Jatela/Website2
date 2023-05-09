@@ -2,8 +2,8 @@
   <div class='col-10'>  <!--whole page is divided into 12 columns, 10 are given to this div, similary 2 columns are given to apply button-->
     <h4 style="color:rgb(120,0,10);margin-bottom:4px">{{each_job['title']}}</h4>  
     <div><b>Location:</b>{{each_job['location']}} </div>
-    {%if 'Salary' in each_job %}   <!--to check if salary not given then dont show on website--> 
-      <div><b>Salary:</b>{{each_job['Salary']}} </div>
+    {%if 'salary' in each_job %}   <!--to check if salary not given then dont show on website--> 
+      <div><b>Salary: </b>{{each_job['salary']}} </div>
     {%endif%}
   </div>
   <div class='col-2'>
